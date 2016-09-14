@@ -23,12 +23,13 @@ namespace Demineur
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
+
 
         private void tsmCustom_Click(object sender, EventArgs e)
         {
+        }
             
-=======
+
         // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -47,7 +48,7 @@ namespace Demineur
                     cases.Location = pos;
                 }
             }
->>>>>>> origin/master
+
         }
     }
 }
