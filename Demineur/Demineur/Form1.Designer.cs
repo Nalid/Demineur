@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
+
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mspMenu = new System.Windows.Forms.MenuStrip();
@@ -125,15 +125,15 @@
             this.commentJouerToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.commentJouerToolStripMenuItem.Text = "Comment jouer";
             // 
-=======
+
             this.SuspendLayout();
             // 
->>>>>>> origin/master
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.ClientSize = new System.Drawing.Size(384, 362);
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
@@ -143,19 +143,17 @@
             this.mspMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-=======
+
             this.ClientSize = new System.Drawing.Size(738, 447);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
->>>>>>> origin/master
 
         }
 
         #endregion
 
-<<<<<<< HEAD
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.MenuStrip mspMenu;
         private System.Windows.Forms.ToolStripMenuItem tsmPartie;
@@ -167,8 +165,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem commentJouerToolStripMenuItem;
-=======
->>>>>>> origin/master
 
     }
 }

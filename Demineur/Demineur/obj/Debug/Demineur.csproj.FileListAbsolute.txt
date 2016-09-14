@@ -29,3 +29,4 @@ C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.c
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
 >>>>>>> origin/master
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
