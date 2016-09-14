@@ -1,1 +1,10 @@
 C:\Users\OLIVEIRAD_INFO\Desktop\Demineur\Demineur\bin\Debug\Demineur.exe.config
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.csprojResolveAssemblyReference.cache
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Properties.Resources.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb

@@ -12,9 +12,35 @@ namespace Demineur
 {
     public partial class Form1 : Form
     {
+        const int LARGEUR = 40;
+        const int HAUTEUR = 40;
+        const int MARGEX = 30;
+        const int MARGEY = 30;
+        Point pos = new System.Drawing.Point();
+        Image imageFond = Properties.Resources.VIDE3;
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CreeGrille(LARGEUR, HAUTEUR);
+        }
+
+        public void CreeGrille(int largeur, int hauteur)
+        {
+            for (int i = 0; i < largeur; i++ )
+            {
+                for (int j = 0; j < hauteur; j++)
+                {
+                    Cases cases = new Cases(this, imageFond);
+                    pos.X = 20 * i + MARGEX;
+                    pos.Y = 20 * j + MARGEY;
+                    cases.Location = pos;
+                }
+            }
         }
     }
 }
