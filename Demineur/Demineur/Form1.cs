@@ -23,7 +23,7 @@ namespace Demineur
         {
             InitializeComponent();
         }
-
+        // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
             CreeGrille(LARGEUR, HAUTEUR);
