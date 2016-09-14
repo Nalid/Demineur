@@ -1,0 +1,2 @@
+C:\Users\OLIVEIRAD_INFO\Desktop\Demineur\Demineur\bin\Debug\Demineur.exe.config
+C:\Users\OLIVEIRAD_INFO\Desktop\Demineur-master\Demineur\Demineur\bin\Debug\Demineur.exe.config
