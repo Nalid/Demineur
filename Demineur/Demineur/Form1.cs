@@ -51,5 +51,11 @@ namespace Demineur
             }
 
         }
+
+        private void tsmAide_Click(object sender, EventArgs e)
+        {
+            Form2 aide = new Form2();
+            aide.ShowDialog();
+        }
     }
 }

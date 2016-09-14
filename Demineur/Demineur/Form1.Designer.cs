@@ -28,37 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.tsmPartie = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmJouer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDebutant = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmIntermediaire = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExpert = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCustom = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.commentJouerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAide = new System.Windows.Forms.ToolStripMenuItem();
+            this.mspMenu = new System.Windows.Forms.MenuStrip();
             this.mspMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // mspMenu
-            // 
-            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmPartie,
-            this.toolStripMenuItem1});
-            this.mspMenu.Location = new System.Drawing.Point(0, 0);
-            this.mspMenu.Name = "mspMenu";
-            this.mspMenu.Size = new System.Drawing.Size(384, 24);
-            this.mspMenu.TabIndex = 2;
-            this.mspMenu.Text = "menuStrip1";
             // 
             // tsmPartie
             // 
@@ -90,7 +71,7 @@
             // 
             this.tsmIntermediaire.Name = "tsmIntermediaire";
             this.tsmIntermediaire.Size = new System.Drawing.Size(152, 22);
-            this.tsmIntermediaire.Text = "Intermediaire";
+            this.tsmIntermediaire.Text = "Intermédiaire";
             // 
             // tsmExpert
             // 
@@ -98,64 +79,63 @@
             this.tsmExpert.Size = new System.Drawing.Size(152, 22);
             this.tsmExpert.Text = "Expert";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.commentJouerToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.toolStripMenuItem1.Text = "?";
-            // 
             // tsmCustom
             // 
             this.tsmCustom.Name = "tsmCustom";
             this.tsmCustom.Size = new System.Drawing.Size(152, 22);
-            this.tsmCustom.Text = "Custom";
-            this.tsmCustom.Click += new System.EventHandler(this.tsmCustom_Click);
+            this.tsmCustom.Text = "Personaliser";
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
             this.tsmExit.Size = new System.Drawing.Size(152, 22);
-            this.tsmExit.Text = "Exit";
+            this.tsmExit.Text = "Quitter";
             // 
-            // commentJouerToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.commentJouerToolStripMenuItem.Name = "commentJouerToolStripMenuItem";
-            this.commentJouerToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.commentJouerToolStripMenuItem.Text = "Comment jouer";
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmAide});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem1.Text = "?";
             // 
-
-            this.SuspendLayout();
+            // tsmAide
             // 
-
+            this.tsmAide.Name = "tsmAide";
+            this.tsmAide.Size = new System.Drawing.Size(152, 22);
+            this.tsmAide.Text = "Aide";
+            this.tsmAide.Click += new System.EventHandler(this.tsmAide_Click);
+            // 
+            // mspMenu
+            // 
+            this.mspMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmPartie,
+            this.toolStripMenuItem1});
+            this.mspMenu.Location = new System.Drawing.Point(0, 0);
+            this.mspMenu.Name = "mspMenu";
+            this.mspMenu.Size = new System.Drawing.Size(738, 24);
+            this.mspMenu.TabIndex = 2;
+            this.mspMenu.Text = "menuStrip1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(384, 362);
+            this.ClientSize = new System.Drawing.Size(738, 447);
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
             this.Name = "Form1";
-            this.Text = "Démineur";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            this.ClientSize = new System.Drawing.Size(738, 447);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
 
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.MenuStrip mspMenu;
         private System.Windows.Forms.ToolStripMenuItem tsmPartie;
         private System.Windows.Forms.ToolStripMenuItem tsmJouer;
         private System.Windows.Forms.ToolStripMenuItem tsmDebutant;
@@ -164,7 +144,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmCustom;
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem commentJouerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmAide;
+        private System.Windows.Forms.MenuStrip mspMenu;
+
 
     }
 }
