@@ -23,11 +23,11 @@ namespace Demineur
         // estetique de la forme, marge du haut et de gauche 
         const int MARGEX = 30;
         const int MARGEY = 30;
+        int nbbombe = 500;
+        int idcases = 0;
+        Random rdmbombe = new Random();
+        List<Cases> caseslist = new List<Cases>();
 
-        // nombre de bombes
-        int nbbombe = 20;
-
-        //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
         Random rdmbombe = new Random(); // random pour placer les bombes 
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
@@ -51,8 +51,8 @@ namespace Demineur
         // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
-            // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
             CreeGrille(LARGEURgrille, HAUTEURgrille);
+            minerterrain(nbbombe);
             minerterrain(nbbombe);
             CountAutour();
         }
@@ -71,34 +71,34 @@ namespace Demineur
                     cases.Width = LARGEURcase;
                     cases.Height = HAUTEURcase;
 
+                    
                     cases.id = idcases;
+                    cases.Text = Convert.ToString(idcases);
 
+
+                    
                     caseslist.Add(cases);
+
 
                     idcases++;
                 }
             }
         }
 
-        // methode pour poser les bombes sur le terrain
+        // methode pour posr les bombes sur le terian 
         public void minerterrain(int nbmines)
         {
             for (int i = 0; i < nbmines; i++)
             {
                 int bombeid = rdmbombe.Next(0, idcases);
                 foreach (var caze in caseslist)
-                {
-                    if (caze.id == bombeid)
-                    {
-                        caze.Bombe = true;
-
-                    }
-                }
-
-            }
-        }
-
-        public void CountAutour()
+	                {
+		                if (caze.id == bombeid)
+	                        {
+		                         caze.Bombe = true;
+                                 caze.Text = "BOUM";
+                                 
+	                        }
         {
             // cherche le nombre de bombes autour de la case en vue d'afficher le numero une fois la case cliquée 
 
@@ -155,13 +155,13 @@ namespace Demineur
                         if (caseatrouver.Bombe == true)
                         {
                             NbAutour++;
-                        }
+	                }
+                
 
-                        break;
                     }
                 }
-                // cherche en haut
-                foreach (var caseatrouver in caseslist)
+
+
                 {
                     if (caze.id - LARGEURgrille < 0)// si est pas en bout de grille
                     {
