@@ -16,5 +16,10 @@ namespace Demineur
         {
             InitializeComponent();
         }
+
+        private void tsmCustom_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
