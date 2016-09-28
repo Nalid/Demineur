@@ -57,5 +57,21 @@ namespace Demineur
             Form2 aide = new Form2();
             aide.ShowDialog();
         }
+
+        private void tsmExit_Click(object sender, EventArgs e)
+        {
+            DialogResult exitApp = MessageBox.Show("Voulez-vous vraiment quitter?","Quitter", MessageBoxButtons.YesNo);
+
+            if (exitApp == DialogResult.Yes)
+            {
+                Application.Exit();
+            }         
+        }
+
+        private void tsmPropos_Click(object sender, EventArgs e)
+        {
+            AboutBox aPropos = new AboutBox();
+            aPropos.ShowDialog();
+        }
     }
 }

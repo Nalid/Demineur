@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tsmPartie = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmJouer = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmDebutant = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +38,9 @@
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAide = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPropos = new System.Windows.Forms.ToolStripMenuItem();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mspMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,43 +61,45 @@
             this.tsmExpert,
             this.tsmCustom});
             this.tsmJouer.Name = "tsmJouer";
-            this.tsmJouer.Size = new System.Drawing.Size(152, 22);
+            this.tsmJouer.Size = new System.Drawing.Size(111, 22);
             this.tsmJouer.Text = "Jouer";
             // 
             // tsmDebutant
             // 
             this.tsmDebutant.Name = "tsmDebutant";
-            this.tsmDebutant.Size = new System.Drawing.Size(152, 22);
+            this.tsmDebutant.Size = new System.Drawing.Size(144, 22);
             this.tsmDebutant.Text = "Débutant";
             // 
             // tsmIntermediaire
             // 
             this.tsmIntermediaire.Name = "tsmIntermediaire";
-            this.tsmIntermediaire.Size = new System.Drawing.Size(152, 22);
+            this.tsmIntermediaire.Size = new System.Drawing.Size(144, 22);
             this.tsmIntermediaire.Text = "Intermédiaire";
             // 
             // tsmExpert
             // 
             this.tsmExpert.Name = "tsmExpert";
-            this.tsmExpert.Size = new System.Drawing.Size(152, 22);
+            this.tsmExpert.Size = new System.Drawing.Size(144, 22);
             this.tsmExpert.Text = "Expert";
             // 
             // tsmCustom
             // 
             this.tsmCustom.Name = "tsmCustom";
-            this.tsmCustom.Size = new System.Drawing.Size(152, 22);
-            this.tsmCustom.Text = "Personaliser";
+            this.tsmCustom.Size = new System.Drawing.Size(144, 22);
+            this.tsmCustom.Text = "Personnaliser";
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmExit.Size = new System.Drawing.Size(111, 22);
             this.tsmExit.Text = "Quitter";
+            this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAide});
+            this.tsmAide,
+            this.tsmPropos});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
@@ -105,6 +110,13 @@
             this.tsmAide.Size = new System.Drawing.Size(152, 22);
             this.tsmAide.Text = "Aide";
             this.tsmAide.Click += new System.EventHandler(this.tsmAide_Click);
+            // 
+            // tsmPropos
+            // 
+            this.tsmPropos.Name = "tsmPropos";
+            this.tsmPropos.Size = new System.Drawing.Size(152, 22);
+            this.tsmPropos.Text = "A propos";
+            this.tsmPropos.Click += new System.EventHandler(this.tsmPropos_Click);
             // 
             // mspMenu
             // 
@@ -146,6 +158,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tsmAide;
         private System.Windows.Forms.MenuStrip mspMenu;
+        private System.Windows.Forms.ToolStripMenuItem tsmPropos;
+        private System.Windows.Forms.Timer timer1;
 
 
     }

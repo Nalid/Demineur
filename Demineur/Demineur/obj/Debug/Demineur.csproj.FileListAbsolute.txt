@@ -30,3 +30,5 @@ C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.e
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
 >>>>>>> origin/master
 C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
