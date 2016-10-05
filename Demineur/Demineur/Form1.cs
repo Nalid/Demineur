@@ -83,7 +83,6 @@ namespace Demineur
                     if (caze.id == bombeid)
                     {
                         caze.Bombe = true;
-                        caze.Text = "BOUM";
 
                     }
                 }
