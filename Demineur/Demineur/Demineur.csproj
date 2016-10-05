@@ -106,9 +106,6 @@
     <None Include="Resources\mine.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\drapeau.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Flag.png" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +122,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cinq.PNG" />
+    <None Include="Resources\dead-smiley.png" />
+    <Content Include="Resources\huit.PNG" />
+    <Content Include="Resources\quatre.PNG" />
+    <Content Include="Resources\sept.PNG" />
+    <Content Include="Resources\six.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
