@@ -32,3 +32,5 @@ C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.p
 C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
 C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
 C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
