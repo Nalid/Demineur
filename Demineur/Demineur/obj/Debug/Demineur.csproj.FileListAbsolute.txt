@@ -1,4 +1,15 @@
 C:\Users\OLIVEIRAD_INFO\Desktop\Demineur\Demineur\bin\Debug\Demineur.exe.config
+<<<<<<< HEAD
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.csprojResolveAssemblyReference.cache
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Démineur.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Properties.Resources.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
+=======
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
@@ -8,3 +19,18 @@ C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\De
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
 C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.csprojResolveAssemblyReference.cache
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.Properties.Resources.resources
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
+C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
+>>>>>>> origin/master
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
+C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
+C:\Users\OLIVEIRAD_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
