@@ -34,7 +34,7 @@ namespace Demineur
         Point pos = new System.Drawing.Point();//point pour positionner les cases
 
         // image de remplissage par default des cases , supprimer plus tard, alpha uniquement 
-        Image imageFond = Properties.Resources.VIDE3;
+        Image imageFond = Properties.Resources.un;
 
         public Form1()
         {

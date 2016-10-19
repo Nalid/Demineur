@@ -26,7 +26,6 @@ namespace Demineur
             Width = 20;
             Height = 20;
             Bombe = false;
-            this.BackgroundImage = image;
             BackgroundImageLayout = ImageLayout.Stretch;
         }
 
@@ -64,13 +63,14 @@ namespace Demineur
 
                     break;
                 case 1:
-                    this.Text = "1";
-
+                    this.BackgroundImage = Properties.Resources.un;
+                    BackgroundImageLayout = ImageLayout.Stretch;
                     // plus tard : change l'image en "case 1 bombe a coté "
 
                     break;
                 case 2:
-                    this.Text = "2";
+                    this.Text = "10";
+                    this.BackgroundImage = Properties.Resources.deux;
 
                     // plus tard : change l'image en "case 2 bombes a coté  "
 

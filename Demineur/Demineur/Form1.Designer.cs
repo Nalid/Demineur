@@ -61,7 +61,7 @@
             this.tsmExpert,
             this.tsmCustom});
             this.tsmJouer.Name = "tsmJouer";
-            this.tsmJouer.Size = new System.Drawing.Size(111, 22);
+            this.tsmJouer.Size = new System.Drawing.Size(152, 22);
             this.tsmJouer.Text = "Jouer";
             // 
             // tsmDebutant
@@ -91,7 +91,7 @@
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(111, 22);
+            this.tsmExit.Size = new System.Drawing.Size(152, 22);
             this.tsmExit.Text = "Quitter";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
