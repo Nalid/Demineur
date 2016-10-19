@@ -107,14 +107,14 @@
             // tsmAide
             // 
             this.tsmAide.Name = "tsmAide";
-            this.tsmAide.Size = new System.Drawing.Size(152, 22);
+            this.tsmAide.Size = new System.Drawing.Size(122, 22);
             this.tsmAide.Text = "Aide";
             this.tsmAide.Click += new System.EventHandler(this.tsmAide_Click);
             // 
             // tsmPropos
             // 
             this.tsmPropos.Name = "tsmPropos";
-            this.tsmPropos.Size = new System.Drawing.Size(152, 22);
+            this.tsmPropos.Size = new System.Drawing.Size(122, 22);
             this.tsmPropos.Text = "A propos";
             this.tsmPropos.Click += new System.EventHandler(this.tsmPropos_Click);
             // 
@@ -125,7 +125,7 @@
             this.toolStripMenuItem1});
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
-            this.mspMenu.Size = new System.Drawing.Size(738, 24);
+            this.mspMenu.Size = new System.Drawing.Size(806, 24);
             this.mspMenu.TabIndex = 2;
             this.mspMenu.Text = "menuStrip1";
             // 
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 447);
+            this.ClientSize = new System.Drawing.Size(806, 539);
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
             this.Name = "Form1";
