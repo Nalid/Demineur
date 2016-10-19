@@ -36,6 +36,7 @@ namespace Demineur
             if (_bombe == true)
             {
                 this.Text = "X";
+                playSound("..\\..\\Resources\\Explosion_sound.wav ");
 
             }
             else
@@ -95,6 +96,14 @@ namespace Demineur
                     this.Text = "8";
                     break;
             }
+        }
+
+        private void playSound(string path)
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = path;
+            player.Load();
+            player.Play();
         }
     }
 }

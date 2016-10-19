@@ -101,6 +101,15 @@ namespace Demineur.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Explosion_sound {
+            get {
+                return ResourceManager.GetStream("Explosion_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Flag {

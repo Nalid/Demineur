@@ -280,5 +280,7 @@ namespace Demineur
             AboutBox aPropos = new AboutBox();
             aPropos.ShowDialog();
         }
+
+
     }
 }
