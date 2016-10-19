@@ -26,7 +26,6 @@ namespace Demineur
             Width = 20;
             Height = 20;
             Bombe = false;
-            BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         protected override void OnClick(EventArgs e)
@@ -94,7 +93,6 @@ namespace Demineur
                     this.Text = "8";
                     break;
             }
-
         }
     }
 }
