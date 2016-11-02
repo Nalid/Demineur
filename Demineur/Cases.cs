@@ -16,6 +16,9 @@ namespace Demineur
         public int id;
         public int BBsAutour;// nb de bombes entourant la case 
         public static Form1 mainform;
+
+
+        public bool isrevealed = false; // est revelé ou pas 
         //Form1 parent = Demineur.Form1.;
 
         public bool Bombe
@@ -33,6 +36,7 @@ namespace Demineur
             Bombe = false;
             this.BackgroundImage = image;
             BackgroundImageLayout = ImageLayout.Stretch;
+            mainform = parent;
 
         }
 
@@ -54,21 +58,25 @@ namespace Demineur
         //compte le nombre de bombe sur les 8 cases qui entour la case en queestion  | remplacée par la function lancée par la fenetre qui le fait en debut de partie 
         public void Reveal()
         {
-            if (_bombe == true)
-            {
-                this.Text = "X";
+            
+                    if (_bombe == true)
+                    {
+                        this.Text = "X";
 
-            }
-            else
-            {
-                this.Reveal(BBsAutour);
-            }
+                    }
+                    else
+                    {
+                        isrevealed = true;
+                        this.Reveal(BBsAutour);
+                        
+                    }
+            
         }
 
         public void Reveal(int NbBombeAutour)
         {
             // revele le nombre de bombes alentours   ( appelé par la methode onclick)
-            switch (NbBombeAutour)
+            switch (BBsAutour)
             {
                 default:
                     break;
@@ -109,6 +117,53 @@ namespace Demineur
                 case 8:
                     this.Text = "8";
                     break;
+            }
+
+        }
+        public void Reveal(int NbBombeAutour,bool bug)
+        {
+            // revele le nombre de bombes alentours   ( appelé par la methode onclick)
+            switch (NbBombeAutour)
+            {
+                default:
+                    break;
+                case 0:
+                    this.Text = "0";
+                   
+                    // plus tard : change l'image en "case vide "
+                    break;
+                case 1:
+                    this.Text = "1";
+
+                    // plus tard : change l'image en "case 1 bombe a coté "
+
+                    break;
+                case 2:
+                    this.Text = "2";
+
+                    // plus tard : change l'image en "case 2 bombes a coté  "
+
+                    break;
+                case 3:
+                    this.Text = "3";
+                    break;
+                case 4:
+                    this.Text = "4";
+                    break;
+                case 5:
+                    this.Text = "5";
+                    break;
+                case 6:
+                    this.Text = "6";
+                    break;
+                case 7:
+                    this.Text = "7";
+                    break;
+                case 8:
+                    this.Text = "8";
+                    break;
+                
+                
             }
 
         }

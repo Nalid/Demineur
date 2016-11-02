@@ -32,6 +32,8 @@ namespace Demineur
         Random rdmbombe = new Random(); // random pour placer les bombes 
         //Liste de liste de cases List<List<Cases>> listecaselist = new List<List<Cases>>;
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
+        List<int> caserevealed = new List<int>();// utile pour les 0 
+
         Point pos = new System.Drawing.Point();//point pour positionner les cases
 
         // image de remplissage par default des cases , supprimer plus tard, alpha uniquement 
@@ -287,7 +289,7 @@ namespace Demineur
              * haut gauche  =  (caze.id - (LARGEURgrille + 1))
              * gauche       =  (caze.id - 1)
              * bas gauche   =  (caze.id + LARGEURgrille - 1)
-             * haut         =  (caze.id - 10)
+             * haut         =  (caze.id - LARGEURgrille)
              * bas          =  (caze.id + LARGEURgrille)
              * haut droite  =  (caze.id - (LARGEURgrille - 1))
              * droite       =  (caze.id + 1)
@@ -296,21 +298,30 @@ namespace Demineur
 
             foreach (var caze in caseslist)
             {
-                if (caze.id == (id0 - (LARGEURgrille + 1))
-                    || caze.id == (id0 - 1)
-                    || caze.id == (id0 + LARGEURgrille - 1)
-                    || caze.id == (id0 - 10)
+                if (caze.id == (id0 - (LARGEURgrille + 1)) && id0 % LARGEURgrille != 0
+                    || (caze.id == (id0 - 1) && id0 % LARGEURgrille != 0)
+                    || (caze.id == (id0 + LARGEURgrille - 1)&& id0 % LARGEURgrille != 0)
+                    || caze.id == (id0 - LARGEURgrille)
                     || caze.id == (id0 + LARGEURgrille)
-                    || caze.id == (id0 - (LARGEURgrille - 1))
-                    || caze.id == (id0 + 1)
-                    || caze.id == (id0 + (LARGEURgrille + 1))
-                    
+                    || (caze.id == (id0 - (LARGEURgrille - 1)) && (id0+1) % LARGEURgrille != 0)
+                    || (caze.id == (id0 + 1) && (id0 + 1) % LARGEURgrille != 0)
+                    || (caze.id == (id0 + (LARGEURgrille + 1)) && (id0 + 1) % LARGEURgrille != 0)
                     )
                 {
-                    caze.Reveal();
+
+
+
+                    if (caze.isrevealed == false)
+                    {
+                        caze.Reveal();
+                    }
+
+
+                    
                 }
 
             }
+
 
 
         }
