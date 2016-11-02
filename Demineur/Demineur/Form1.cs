@@ -17,24 +17,25 @@ namespace Demineur
         const int HAUTEURcase = 45;
 
         // nombres de cases 
-        const int LARGEURgrille = 10;
-        const int HAUTEURgrille = 10;
+        const int LARGEURgrille = 5;
+        const int HAUTEURgrille = 5;
 
         // estetique de la forme, marge du haut et de gauche 
         const int MARGEX = 30;
         const int MARGEY = 30;
-        int nbbombe = 500;
-        int idcases = 0;
-        Random rdmbombe = new Random();
-        List<Cases> caseslist = new List<Cases>();
 
+        // nombre de bombes
+        int nbbombe = 1;
+
+        //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
         Random rdmbombe = new Random(); // random pour placer les bombes 
+        //Liste de liste de cases List<List<Cases>> listecaselist = new List<List<Cases>>;
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
         Point pos = new System.Drawing.Point();//point pour positionner les cases
 
         // image de remplissage par default des cases , supprimer plus tard, alpha uniquement 
-        Image imageFond = Properties.Resources.un;
+        Image imageFond = Properties.Resources.VIDE3;
 
         public Form1()
         {
@@ -42,17 +43,18 @@ namespace Demineur
         }
 
 
+
         private void tsmCustom_Click(object sender, EventArgs e)
         {
 
         }
-            
+
 
         // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
+            // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
             CreeGrille(LARGEURgrille, HAUTEURgrille);
-            minerterrain(nbbombe);
             minerterrain(nbbombe);
             CountAutour();
         }
@@ -62,6 +64,7 @@ namespace Demineur
             // creation de la grille et des toutes les cases 
             for (int i = 0; i < largeur; i++)
             {
+                //Crée une liste
                 for (int j = 0; j < hauteur; j++)
                 {
                     Cases cases = new Cases(this, imageFond);// creation de la listes des cases 
@@ -71,36 +74,74 @@ namespace Demineur
                     cases.Width = LARGEURcase;
                     cases.Height = HAUTEURcase;
 
-                    
                     cases.id = idcases;
-                    cases.Text = Convert.ToString(idcases);
 
-
-                    
                     caseslist.Add(cases);
-
 
                     idcases++;
                 }
             }
         }
 
-        // methode pour posr les bombes sur le terian 
+        // methode pour poser les bombes sur le terrain
         public void minerterrain(int nbmines)
         {
             for (int i = 0; i < nbmines; i++)
             {
                 int bombeid = rdmbombe.Next(0, idcases);
                 foreach (var caze in caseslist)
-	                {
-		                if (caze.id == bombeid)
-	                        {
-		                         caze.Bombe = true;
-                                 caze.Text = "BOUM";
-                                 
-	                        }
+                {
+                    if (caze.id == bombeid)
+                    {
+                        caze.Bombe = true;
+
+                    }
         {
             // cherche le nombre de bombes autour de la case en vue d'afficher le numero une fois la case cliquée 
+
+            // peut etre pas fini
+
+            foreach (var caze in caseslist)
+            {
+                int NbAutour = 0;
+                // cherche en haut a gauche
+                foreach (var caseatrouver in caseslist)
+                {
+                    if (caze.id % LARGEURgrille == 0)// si est pas en bout de grille
+                    {
+                        break;
+                    }
+                    else if (caseatrouver.id == (caze.id - (LARGEURgrille + 1)))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                }
+
+            }
+        }
+
+        public void CountAutour()
+        {
+            // cherche le nombre de bombes autour de la case en vue d'afficher le numero une fois la case cliquée 
+
+
+
+            // empplacement des cases par rapport a la centrale (celle cliquée)
+            /*
+             * haut gauche  =  (caze.id - (LARGEURgrille + 1))
+             * gauche       =  (caze.id - 1)
+             * bas gauche   =  (caze.id + LARGEURgrille - 1)
+             * haut         =  (caze.id - 10)
+             * bas          =  (caze.id + LARGEURgrille)
+             * haut droite  =  (caze.id - (LARGEURgrille - 1))
+             * droite       =  (caze.id + 1)
+             * bas droite   =  (caze.id + (LARGEURgrille + 1))
+             * 
+             */
+
+
 
             // peut etre pas fini
 
@@ -147,6 +188,97 @@ namespace Demineur
                 {
                     if (caze.id % LARGEURgrille == 0)// si est pas en bout de grille
                     {
+                        break;
+                    }
+                    else if (caseatrouver.id == (caze.id + LARGEURgrille - 1))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+                // cherche en haut
+                foreach (var caseatrouver in caseslist)
+                {
+                    if (caze.id - LARGEURgrille < 0)// si est pas en bout de grille
+                    {
+                        break;
+                    }
+                    else if (caseatrouver.id == (caze.id - 10))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+                // cherche en bas
+                foreach (var caseatrouver in caseslist)
+                {
+                    if (caze.id + LARGEURgrille > (HAUTEURgrille * LARGEURgrille))// si est pas en bout de grille
+                    {
+                        break;
+                    }
+                    if (caseatrouver.id == (caze.id + LARGEURgrille))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+                // cherche en haut a droite
+                foreach (var caseatrouver in caseslist)
+                {
+                    if ((caze.id + 1) % LARGEURgrille == 0)// si est pas en bout de grille
+                    {
+                        break;
+                    }
+                    else if (caseatrouver.id == (caze.id - (LARGEURgrille - 1)))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+                // cherche a droite
+                foreach (var caseatrouver in caseslist)
+                {
+                    if ((caze.id + 1) % LARGEURgrille == 0)// si est pas en bout de grille
+                    {
+                        break;
+                    }
+                    else if (caseatrouver.id == (caze.id + 1))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+                // cherche en bas a droite
+                foreach (var caseatrouver in caseslist)
+                {
+                    if ((caze.id + 1) % LARGEURgrille == 0)// si est pas en bout de grille
+                    {
+                        break;
                         break;
                     }
                     else if (caseatrouver.id == (caze.id + LARGEURgrille - 1))
@@ -279,8 +411,82 @@ namespace Demineur
         {
             AboutBox aPropos = new AboutBox();
             aPropos.ShowDialog();
+                    }
+                    else if (caseatrouver.id == (caze.id + (LARGEURgrille + 1)))
+                    {
+                        // si la case a coté de la case selecitonnée a une bombe 
+                        if (caseatrouver.Bombe == true)
+                        {
+                            NbAutour++;
+                        }
+
+                        break;
+                    }
+                }
+
+                // inscris le nombre de bombes a coté de la case dans le parametre de la case
+                caze.BBsAutour = NbAutour;
+
+            }
+
+        }
+
+        public void Revealextend(int id0)
+        {
+            // empplacement des cases par rapport a la centrale (celle cliquée)
+            /*
+             * haut gauche  =  (caze.id - (LARGEURgrille + 1))
+             * gauche       =  (caze.id - 1)
+             * bas gauche   =  (caze.id + LARGEURgrille - 1)
+             * haut         =  (caze.id - 10)
+             * bas          =  (caze.id + LARGEURgrille)
+             * haut droite  =  (caze.id - (LARGEURgrille - 1))
+             * droite       =  (caze.id + 1)
+             * bas droite   =  (caze.id + (LARGEURgrille + 1))
+             */
+
+            foreach (var caze in caseslist)
+            {
+                
+                // haut gauche
+                if (id0 % LARGEURgrille != 0 && caze.id == (id0 - (LARGEURgrille + 1)))
+                {
+                    caze.Reveal();
+                }
+                    //gauche
+                else if (id0 % LARGEURgrille != 0 && caze.id == (id0 - 1))// si est pas en bout de grille
+                {
+                    caze.Reveal();
+                }
+                    // bas gauche
+                else if (id0 % LARGEURgrille != 0 && caze.id == (id0 + (LARGEURgrille - 1)))// si est pas en bout de grille
+                {
+                    caze.Reveal();
+                }
+                 //haut 
+                else if ( caze.id == (id0 - LARGEURgrille ))
+                {
+                    caze.Reveal();
+                }
+                //bas 
+                else if ( caze.id == (id0 + LARGEURgrille))
+                {
+                    caze.Reveal();
+                }
+
+                
+                
+                
+                
+
+
+
+            }
+
+
         }
 
 
+       
     }
 }

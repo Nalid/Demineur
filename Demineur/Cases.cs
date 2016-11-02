@@ -15,7 +15,7 @@ namespace Demineur
         private bool _bombe;
         public int id;
         public int BBsAutour;// nb de bombes entourant la case 
-        private  Form1 mainform;
+        public static Form1 mainform;
         //Form1 parent = Demineur.Form1.;
 
         public bool Bombe
@@ -27,7 +27,7 @@ namespace Demineur
         public Cases(Form1 parent, Image image)
         {
             this.Parent = parent;
-            mainform = parent;
+            
             Width = 20;
             Height = 20;
             Bombe = false;
@@ -47,7 +47,7 @@ namespace Demineur
             else
             {
                 this.Reveal(BBsAutour);
-
+                
             }
         }
 
@@ -112,7 +112,7 @@ namespace Demineur
             }
 
         }
-
+        
 
     }
 }

@@ -28,15 +28,15 @@ C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.P
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
 C:\Users\TAGLIABUEG_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
->>>>>>> origin/master
-C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
-C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
-C:\Users\SULZBACHJ_INFO\Documents\GitHub\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
-C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
-C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
-C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
-C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.csprojResolveAssemblyReference.cache
-C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.AboutBox.resources
+E:\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe.config
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.exe
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.pdb
+E:\Demineur\Demineur\Demineur\bin\Debug\Demineur.exe
+E:\Demineur\Demineur\Demineur\bin\Debug\Demineur.pdb
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.csprojResolveAssemblyReference.cache
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.Properties.Resources.resources
+E:\Demineur\Demineur\Demineur\obj\Debug\Demineur.csproj.GenerateResource.Cache
 C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form1.resources
 C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.Form2.resources
 C:\Users\METRYS_INFO\Desktop\Demineur\Demineur\Demineur\obj\Debug\Demineur.Properties.Resources.resources
