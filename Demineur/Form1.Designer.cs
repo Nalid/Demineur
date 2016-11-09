@@ -107,14 +107,14 @@
             // tsmAide
             // 
             this.tsmAide.Name = "tsmAide";
-            this.tsmAide.Size = new System.Drawing.Size(152, 22);
+            this.tsmAide.Size = new System.Drawing.Size(122, 22);
             this.tsmAide.Text = "Aide";
             this.tsmAide.Click += new System.EventHandler(this.tsmAide_Click);
             // 
             // tsmPropos
             // 
             this.tsmPropos.Name = "tsmPropos";
-            this.tsmPropos.Size = new System.Drawing.Size(152, 22);
+            this.tsmPropos.Size = new System.Drawing.Size(122, 22);
             this.tsmPropos.Text = "A propos";
             this.tsmPropos.Click += new System.EventHandler(this.tsmPropos_Click);
             // 

@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\cinq.PNG" />
+    <None Include="Resources\zero.png" />
     <None Include="Resources\dead-smiley.png" />
     <Content Include="Resources\huit.PNG" />
     <Content Include="Resources\quatre.PNG" />

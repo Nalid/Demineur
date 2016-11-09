@@ -13,10 +13,17 @@ namespace Demineur
     class Cases : Button
     {
         private bool _bombe;
-        private int nbrClick = 0;
+        
         public int id;
         public int BBsAutour;// nb de bombes entourant la case 
         public static Form1 mainform;
+        private bool flag = false;
+
+        public bool Flag
+        {
+            get { return flag; }
+            set { flag = value; }
+        }
 
 
         public bool isrevealed = false; // est revelé ou pas 
@@ -46,28 +53,46 @@ namespace Demineur
             // lorsque cette case est cliquée          |    * en cours 
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                if (this.BackgroundImage.Tag == "VIDE3")
+                if (this.isrevealed == true)
                 {
-                    this.BackgroundImage = Properties.Resources.Flag;
-                    
+                    // tu peux rine faire
                 }
-                if(this.BackgroundImage.Tag == "Flag")
-                {
-                    this.BackgroundImage = Properties.Resources.VIDE3;
+                else 
+                { 
+                     if (flag == false)
+                                    {
+                                        // met un drapeau 
+                                        this.BackgroundImage = Properties.Resources.Flag;
+                                        flag = true;
+                    
+                                    }
+                                    else if( flag ==true )
+                                    {
+                                        this.BackgroundImage = null;
+                                        flag = false;
+                                    }
                 }
             }
-            if(e.Button == System.Windows.Forms.MouseButtons.Left)
+
+            if (this.flag == true)
             {
-                
-                if (_bombe == true)
+                // tu fais rine  
+            }
+            else// clic gauche
+            {
+                if (e.Button == System.Windows.Forms.MouseButtons.Left)
                 {
-                    this.Text = "X";
 
-                }
-                else
-                {
-                    this.Reveal(BBsAutour);
+                    if (_bombe == true)
+                    {
+                        this.BackgroundImage = Properties.Resources.mine;
 
+                    }
+                    else
+                    {
+                        this.Reveal(BBsAutour);
+
+                    }
                 }
             }
             
@@ -93,98 +118,53 @@ namespace Demineur
 
         public void Reveal(int NbBombeAutour)
         {
+            isrevealed = true;
             // revele le nombre de bombes alentours   ( appelé par la methode onclick)
             switch (BBsAutour)
             {
                 default:
                     break;
                 case 0:
-                    this.Text = "0";
+                    this.BackgroundImage = Properties.Resources.zero;
                     mainform.Revealextend(this.id);
 
                     // plus tard : change l'image en "case vide "
 
                     break;
                 case 1:
-                    this.Text = "1";
-
+                    
+                    this.BackgroundImage = Properties.Resources.un;
                     // plus tard : change l'image en "case 1 bombe a coté "
 
                     break;
                 case 2:
-                    this.Text = "2";
+                    this.BackgroundImage = Properties.Resources.deux;
 
                     // plus tard : change l'image en "case 2 bombes a coté  "
 
                     break;
                 case 3:
-                    this.Text = "3";
+                    this.BackgroundImage = Properties.Resources.trois;
                     break;
                 case 4:
-                    this.Text = "4";
+                    this.BackgroundImage = Properties.Resources.quatre;
                     break;
                 case 5:
-                    this.Text = "5";
+                    this.BackgroundImage = Properties.Resources.cinq;
                     break;
                 case 6:
-                    this.Text = "6";
+                    this.BackgroundImage = Properties.Resources.six;
                     break;
                 case 7:
-                    this.Text = "7";
+                    this.BackgroundImage = Properties.Resources.sept;
                     break;
                 case 8:
-                    this.Text = "8";
+                    this.BackgroundImage = Properties.Resources.huit;
                     break;
             }
 
         }
-        public void Reveal(int NbBombeAutour,bool bug)
-        {
-            // revele le nombre de bombes alentours   ( appelé par la methode onclick)
-            switch (NbBombeAutour)
-            {
-                default:
-                    break;
-                case 0:
-                    this.Text = "0";
-                   
-                    // plus tard : change l'image en "case vide "
-                    break;
-                case 1:
-                    this.Text = "1";
-
-                    // plus tard : change l'image en "case 1 bombe a coté "
-
-                    break;
-                case 2:
-                    this.Text = "2";
-
-                    // plus tard : change l'image en "case 2 bombes a coté  "
-
-                    break;
-                case 3:
-                    this.Text = "3";
-                    break;
-                case 4:
-                    this.Text = "4";
-                    break;
-                case 5:
-                    this.Text = "5";
-                    break;
-                case 6:
-                    this.Text = "6";
-                    break;
-                case 7:
-                    this.Text = "7";
-                    break;
-                case 8:
-                    this.Text = "8";
-                    break;
-                
-                
-            }
-
-        }
+        
 
     }
 }

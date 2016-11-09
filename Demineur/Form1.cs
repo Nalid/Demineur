@@ -13,19 +13,19 @@ namespace Demineur
     public partial class Form1 : Form
     {
         //estethique des cases 
-        const int LARGEURcase = 45;
-        const int HAUTEURcase = 45;
+        const int LARGEURcase = 25;
+        const int HAUTEURcase = 25;
 
         // nombres de cases 
-        const int LARGEURgrille = 10;
-        const int HAUTEURgrille = 10;
+        const int LARGEURgrille = 40;
+        const int HAUTEURgrille = 40;
 
         // estetique de la forme, marge du haut et de gauche 
         const int MARGEX = 30;
         const int MARGEY = 30;
 
         // nombre de bombes
-        int nbbombe = 20;
+        int nbbombe = 1;
 
         //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
@@ -37,20 +37,20 @@ namespace Demineur
         Point pos = new System.Drawing.Point();//point pour positionner les cases
 
         // image de remplissage par default des cases , supprimer plus tard, alpha uniquement 
-        Image imageFond = Properties.Resources.VIDE3;
+        Image imageFond = null;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        
+
 
         private void tsmCustom_Click(object sender, EventArgs e)
         {
 
         }
-            
+
 
         // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace Demineur
                     {
                         break;
                     }
-                    else if (caseatrouver.id == (caze.id - 10))
+                    else if (caseatrouver.id == (caze.id - LARGEURgrille))
                     {
                         // si la case a coté de la case selecitonnée a une bombe 
                         if (caseatrouver.Bombe == true)
@@ -300,10 +300,10 @@ namespace Demineur
             {
                 if (caze.id == (id0 - (LARGEURgrille + 1)) && id0 % LARGEURgrille != 0
                     || (caze.id == (id0 - 1) && id0 % LARGEURgrille != 0)
-                    || (caze.id == (id0 + LARGEURgrille - 1)&& id0 % LARGEURgrille != 0)
+                    || (caze.id == (id0 + LARGEURgrille - 1) && id0 % LARGEURgrille != 0)
                     || caze.id == (id0 - LARGEURgrille)
                     || caze.id == (id0 + LARGEURgrille)
-                    || (caze.id == (id0 - (LARGEURgrille - 1)) && (id0+1) % LARGEURgrille != 0)
+                    || (caze.id == (id0 - (LARGEURgrille - 1)) && (id0 + 1) % LARGEURgrille != 0)
                     || (caze.id == (id0 + 1) && (id0 + 1) % LARGEURgrille != 0)
                     || (caze.id == (id0 + (LARGEURgrille + 1)) && (id0 + 1) % LARGEURgrille != 0)
                     )
@@ -317,7 +317,7 @@ namespace Demineur
                     }
 
 
-                    
+
                 }
 
             }
@@ -335,12 +335,12 @@ namespace Demineur
 
         private void tsmExit_Click(object sender, EventArgs e)
         {
-            DialogResult exitApp = MessageBox.Show("Voulez-vous vraiment quitter?","Quitter", MessageBoxButtons.YesNo);
+            DialogResult exitApp = MessageBox.Show("Voulez-vous vraiment quitter?", "Quitter", MessageBoxButtons.YesNo);
 
             if (exitApp == DialogResult.Yes)
             {
                 Application.Exit();
-            }         
+            }
         }
 
         private void tsmPropos_Click(object sender, EventArgs e)
