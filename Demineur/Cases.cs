@@ -13,6 +13,7 @@ namespace Demineur
     class Cases : Button
     {
         private bool _bombe;
+        private int nbrClick = 0;
         public int id;
         public int BBsAutour;// nb de bombes entourant la case 
         public static Form1 mainform;
@@ -40,19 +41,36 @@ namespace Demineur
 
         }
 
-        protected override void OnClick(EventArgs e)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
             // lorsque cette case est cliquée          |    * en cours 
-            if (_bombe == true)
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
-                this.Text = "X";
-
+                if (this.BackgroundImage.Tag == "VIDE3")
+                {
+                    this.BackgroundImage = Properties.Resources.Flag;
+                    
+                }
+                if(this.BackgroundImage.Tag == "Flag")
+                {
+                    this.BackgroundImage = Properties.Resources.VIDE3;
+                }
             }
-            else
+            if(e.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                this.Reveal(BBsAutour);
                 
+                if (_bombe == true)
+                {
+                    this.Text = "X";
+
+                }
+                else
+                {
+                    this.Reveal(BBsAutour);
+
+                }
             }
+            
         }
 
         //compte le nombre de bombe sur les 8 cases qui entour la case en queestion  | remplacée par la function lancée par la fenetre qui le fait en debut de partie 
@@ -167,7 +185,6 @@ namespace Demineur
             }
 
         }
-        
 
     }
 }
