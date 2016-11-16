@@ -17,8 +17,8 @@ namespace Demineur
         const int HAUTEURcase = 25;
 
         // nombres de cases 
-        const int LARGEURgrille = 40;
-        const int HAUTEURgrille = 40;
+        const int LARGEURgrille = 20;
+        const int HAUTEURgrille = 20;
 
         // estetique de la forme, marge du haut et de gauche 
         const int MARGEX = 30;

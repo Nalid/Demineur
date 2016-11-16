@@ -86,7 +86,7 @@ namespace Demineur
                     if (_bombe == true)
                     {
                         this.BackgroundImage = Properties.Resources.mine;
-
+                        playSound("..\\..\\Resources\\Explosion_sound.wav");
                     }
                     else
                     {
@@ -164,7 +164,14 @@ namespace Demineur
             }
 
         }
-        
+
+        private void playSound(string path)
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = path;
+            player.Load();
+            player.Play();
+        }
 
     }
 }

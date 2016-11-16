@@ -91,12 +91,30 @@ namespace Demineur.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ding_Sound_Effect {
+            get {
+                return ResourceManager.GetStream("Ding_Sound_Effect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap exemple {
             get {
                 object obj = ResourceManager.GetObject("exemple", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Explosion_sound {
+            get {
+                return ResourceManager.GetStream("Explosion_sound", resourceCulture);
             }
         }
         
@@ -167,6 +185,15 @@ namespace Demineur.Properties {
             get {
                 object obj = ResourceManager.GetObject("six", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.IO.UnmanagedMemoryStream semblable à System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream The_Body_Bome_The_Hurt_Locker {
+            get {
+                return ResourceManager.GetStream("The_Body_Bome_The_Hurt_Locker", resourceCulture);
             }
         }
         
