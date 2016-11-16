@@ -42,6 +42,7 @@ namespace Demineur
         public Form1()
         {
             InitializeComponent();
+            playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
         }
 
 
@@ -348,5 +349,17 @@ namespace Demineur
             AboutBox aPropos = new AboutBox();
             aPropos.ShowDialog();
         }
+        /// <summary>
+        /// Permet de jouer du son avec des fichiers .WAV
+        /// </summary>
+        /// <param name="path">C'est le chemin du fichier dans les ressources</param>
+        public void playSound(string path)
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+            player.SoundLocation = path;
+            player.Load();
+            player.Play();
+        }
+        
     }
 }
