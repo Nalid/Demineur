@@ -87,9 +87,11 @@ namespace Demineur
                     {
                         this.BackgroundImage = Properties.Resources.mine;
                         mainform.playSound("..\\..\\Resources\\Explosion_sound.wav");
+                        mainform.gameover();
                     }
                     else
                     {
+                        mainform.IsitFinish();
                         this.Reveal(BBsAutour);
                        
                     }
@@ -104,7 +106,8 @@ namespace Demineur
             
                     if (_bombe == true)
                     {
-                        this.Text = "X";
+
+                        
 
                     }
                     else
@@ -162,7 +165,7 @@ namespace Demineur
                     this.BackgroundImage = Properties.Resources.huit;
                     break;
             }
-
+            mainform.IsitFinish();
         }
 
         

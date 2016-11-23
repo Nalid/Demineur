@@ -25,14 +25,17 @@ namespace Demineur
         const int MARGEY = 30;
 
         // nombre de bombes
-        int nbbombe = 1;
+        int nbbombe = 10;
 
         //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
         Random rdmbombe = new Random(); // random pour placer les bombes 
-        //Liste de liste de cases List<List<Cases>> listecaselist = new List<List<Cases>>;
+        
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
-        List<int> caserevealed = new List<int>();// utile pour les 0 
+       
+        
+
+        // List<int> caserevealed = new List<int>();// utile pour les 0 
 
         Point pos = new System.Drawing.Point();//point pour positionner les cases
 
@@ -45,18 +48,20 @@ namespace Demineur
             playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
         }
 
-
-
         private void tsmCustom_Click(object sender, EventArgs e)
         {
 
         }
 
-
         // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
             // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
+            NewGame();
+        }
+
+        public void NewGame()
+        {
             CreeGrille(LARGEURgrille, HAUTEURgrille);
             minerterrain(nbbombe);
             CountAutour();
@@ -64,6 +69,16 @@ namespace Demineur
 
         public void CreeGrille(int largeur, int hauteur)
         {
+            // vider tout
+            foreach (var caze in caseslist)
+            {
+                caze.Dispose();
+            }
+            caseslist.Clear();
+
+            idcases = 0; //reinit
+
+
             // creation de la grille et des toutes les cases 
             for (int i = 0; i < largeur; i++)
             {
@@ -97,11 +112,11 @@ namespace Demineur
                     if (caze.id == bombeid)
                     {
                         caze.Bombe = true;
-
                     }
                 }
 
             }
+            
         }
 
         public void CountAutour()
@@ -122,8 +137,6 @@ namespace Demineur
              * bas droite   =  (caze.id + (LARGEURgrille + 1))
              * 
              */
-
-
 
 
 
@@ -311,13 +324,11 @@ namespace Demineur
                 {
 
 
-
                     if (caze.isrevealed == false)
                     {
                         caze.Reveal();
+                        
                     }
-
-
 
                 }
 
@@ -359,6 +370,37 @@ namespace Demineur
             player.SoundLocation = path;
             player.Load();
             player.Play();
+        }
+
+        public void gameover()
+        {
+            MessageBox.Show("vous avez perdu");
+            NewGame();
+            
+
+        }
+        public void IsitFinish()
+        {
+            int nbrevealed = 0;
+            foreach (var caze in caseslist)
+            {
+                if (caze.isrevealed == true)
+                {
+                    nbrevealed++;
+                }
+                // si toutes les cases non bombes sont revélées 
+                if (nbrevealed >= (LARGEURgrille*HAUTEURgrille)-nbbombe)
+                {
+                    GameWin();
+                    break;
+                }
+            }
+        }
+        // fonction de victoire 
+        public void GameWin()
+        {
+            MessageBox.Show("vous avez gagné");
+            NewGame();
         }
         
     }
