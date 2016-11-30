@@ -25,7 +25,7 @@ namespace Demineur
         const int MARGEY = 30;
 
         // nombre de bombes
-        int nbbombe = 10;
+        int nbbombe = 50;
 
         //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
