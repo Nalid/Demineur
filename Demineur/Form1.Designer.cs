@@ -61,37 +61,40 @@
             this.tsmExpert,
             this.tsmCustom});
             this.tsmJouer.Name = "tsmJouer";
-            this.tsmJouer.Size = new System.Drawing.Size(111, 22);
+            this.tsmJouer.Size = new System.Drawing.Size(152, 22);
             this.tsmJouer.Text = "Jouer";
             // 
             // tsmDebutant
             // 
             this.tsmDebutant.Name = "tsmDebutant";
-            this.tsmDebutant.Size = new System.Drawing.Size(144, 22);
+            this.tsmDebutant.Size = new System.Drawing.Size(152, 22);
             this.tsmDebutant.Text = "Débutant";
+            this.tsmDebutant.Click += new System.EventHandler(this.tsmDebutant_Click);
             // 
             // tsmIntermediaire
             // 
             this.tsmIntermediaire.Name = "tsmIntermediaire";
-            this.tsmIntermediaire.Size = new System.Drawing.Size(144, 22);
+            this.tsmIntermediaire.Size = new System.Drawing.Size(152, 22);
             this.tsmIntermediaire.Text = "Intermédiaire";
+            this.tsmIntermediaire.Click += new System.EventHandler(this.tsmIntermediaire_Click);
             // 
             // tsmExpert
             // 
             this.tsmExpert.Name = "tsmExpert";
-            this.tsmExpert.Size = new System.Drawing.Size(144, 22);
+            this.tsmExpert.Size = new System.Drawing.Size(152, 22);
             this.tsmExpert.Text = "Expert";
+            this.tsmExpert.Click += new System.EventHandler(this.tsmExpert_Click);
             // 
             // tsmCustom
             // 
             this.tsmCustom.Name = "tsmCustom";
-            this.tsmCustom.Size = new System.Drawing.Size(144, 22);
+            this.tsmCustom.Size = new System.Drawing.Size(152, 22);
             this.tsmCustom.Text = "Personnaliser";
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(111, 22);
+            this.tsmExit.Size = new System.Drawing.Size(152, 22);
             this.tsmExit.Text = "Quitter";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
@@ -125,7 +128,7 @@
             this.toolStripMenuItem1});
             this.mspMenu.Location = new System.Drawing.Point(0, 0);
             this.mspMenu.Name = "mspMenu";
-            this.mspMenu.Size = new System.Drawing.Size(738, 24);
+            this.mspMenu.Size = new System.Drawing.Size(886, 24);
             this.mspMenu.TabIndex = 2;
             this.mspMenu.Text = "menuStrip1";
             // 
@@ -133,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 447);
+            this.ClientSize = new System.Drawing.Size(886, 447);
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
             this.Name = "Form1";

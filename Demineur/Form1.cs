@@ -17,23 +17,21 @@ namespace Demineur
         const int HAUTEURcase = 25;
 
         // nombres de cases 
-        const int LARGEURgrille = 20;
-        const int HAUTEURgrille = 20;
+        int LARGEURgrille;
+        int HAUTEURgrille;
 
         // estetique de la forme, marge du haut et de gauche 
         const int MARGEX = 30;
         const int MARGEY = 30;
 
         // nombre de bombes
-        int nbbombe = 50;
+        int nbbombe;
 
         //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
         Random rdmbombe = new Random(); // random pour placer les bombes 
         
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
-       
-        
 
         // List<int> caserevealed = new List<int>();// utile pour les 0 
 
@@ -46,6 +44,39 @@ namespace Demineur
         {
             InitializeComponent();
             playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
+        }
+
+        private void tsmDebutant_Click(object sender, EventArgs e)
+        {
+            tsmIntermediaire.Checked = false;
+            tsmExpert.Checked = false;
+            tsmDebutant.Checked = true;
+            LARGEURgrille = 9;
+            HAUTEURgrille = 9;
+            nbbombe = 10;
+            NewGame();
+        }
+
+        private void tsmIntermediaire_Click(object sender, EventArgs e)
+        {
+            tsmExpert.Checked = false;
+            tsmDebutant.Checked = false;
+            tsmIntermediaire.Checked = true;
+            LARGEURgrille = 16;
+            HAUTEURgrille = 16;
+            nbbombe = 40;
+            NewGame();
+        }
+
+        private void tsmExpert_Click(object sender, EventArgs e)
+        {
+            tsmExpert.Checked = true;
+            tsmDebutant.Checked = false;
+            tsmIntermediaire.Checked = false;
+            LARGEURgrille = 16;
+            HAUTEURgrille = 30;
+            nbbombe = 99;
+            NewGame();
         }
 
         private void tsmCustom_Click(object sender, EventArgs e)
@@ -402,6 +433,5 @@ namespace Demineur
             MessageBox.Show("vous avez gagné");
             NewGame();
         }
-        
     }
 }
