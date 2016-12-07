@@ -91,7 +91,7 @@ namespace Demineur
         private void Form1_Load(object sender, EventArgs e)
         {
             // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
-            NewGame();
+            
             
         }
 
@@ -100,6 +100,10 @@ namespace Demineur
             CreeGrille(LARGEURgrille, HAUTEURgrille);
             minerterrain(nbbombe);
             CountAutour();
+            playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
+            tim.Enabled = true;
+            pbHorloge.Visible = true;
+            timCounter = 0;
             
         }
 
@@ -135,10 +139,7 @@ namespace Demineur
                     idcases++;
                 }
             }
-            playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
-            tim.Enabled = true;
-            pbHorloge.Visible = true;
-            timCounter = 0;
+           
         }
 
         // methode pour poser les bombes sur le terrain
