@@ -40,8 +40,11 @@
             this.tsmAide = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPropos = new System.Windows.Forms.ToolStripMenuItem();
             this.mspMenu = new System.Windows.Forms.MenuStrip();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tim = new System.Windows.Forms.Timer(this.components);
+            this.lblHorlogeUp = new System.Windows.Forms.Label();
+            this.pbHorloge = new System.Windows.Forms.PictureBox();
             this.mspMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHorloge)).BeginInit();
             this.SuspendLayout();
             // 
             // tsmPartie
@@ -61,40 +64,40 @@
             this.tsmExpert,
             this.tsmCustom});
             this.tsmJouer.Name = "tsmJouer";
-            this.tsmJouer.Size = new System.Drawing.Size(152, 22);
+            this.tsmJouer.Size = new System.Drawing.Size(111, 22);
             this.tsmJouer.Text = "Jouer";
             // 
             // tsmDebutant
             // 
             this.tsmDebutant.Name = "tsmDebutant";
-            this.tsmDebutant.Size = new System.Drawing.Size(152, 22);
+            this.tsmDebutant.Size = new System.Drawing.Size(144, 22);
             this.tsmDebutant.Text = "Débutant";
             this.tsmDebutant.Click += new System.EventHandler(this.tsmDebutant_Click);
             // 
             // tsmIntermediaire
             // 
             this.tsmIntermediaire.Name = "tsmIntermediaire";
-            this.tsmIntermediaire.Size = new System.Drawing.Size(152, 22);
+            this.tsmIntermediaire.Size = new System.Drawing.Size(144, 22);
             this.tsmIntermediaire.Text = "Intermédiaire";
             this.tsmIntermediaire.Click += new System.EventHandler(this.tsmIntermediaire_Click);
             // 
             // tsmExpert
             // 
             this.tsmExpert.Name = "tsmExpert";
-            this.tsmExpert.Size = new System.Drawing.Size(152, 22);
+            this.tsmExpert.Size = new System.Drawing.Size(144, 22);
             this.tsmExpert.Text = "Expert";
             this.tsmExpert.Click += new System.EventHandler(this.tsmExpert_Click);
             // 
             // tsmCustom
             // 
             this.tsmCustom.Name = "tsmCustom";
-            this.tsmCustom.Size = new System.Drawing.Size(152, 22);
+            this.tsmCustom.Size = new System.Drawing.Size(144, 22);
             this.tsmCustom.Text = "Personnaliser";
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmExit.Size = new System.Drawing.Size(111, 22);
             this.tsmExit.Text = "Quitter";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
@@ -132,11 +135,38 @@
             this.mspMenu.TabIndex = 2;
             this.mspMenu.Text = "menuStrip1";
             // 
+            // tim
+            // 
+            this.tim.Interval = 1000;
+            this.tim.Tick += new System.EventHandler(this.tim_Tick);
+            // 
+            // lblHorlogeUp
+            // 
+            this.lblHorlogeUp.AutoSize = true;
+            this.lblHorlogeUp.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorlogeUp.Location = new System.Drawing.Point(555, 47);
+            this.lblHorlogeUp.Name = "lblHorlogeUp";
+            this.lblHorlogeUp.Size = new System.Drawing.Size(0, 29);
+            this.lblHorlogeUp.TabIndex = 3;
+            // 
+            // pbHorloge
+            // 
+            this.pbHorloge.Image = global::Demineur.Properties.Resources.horloge;
+            this.pbHorloge.Location = new System.Drawing.Point(508, 47);
+            this.pbHorloge.Name = "pbHorloge";
+            this.pbHorloge.Size = new System.Drawing.Size(41, 38);
+            this.pbHorloge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHorloge.TabIndex = 4;
+            this.pbHorloge.TabStop = false;
+            this.pbHorloge.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 447);
+            this.Controls.Add(this.pbHorloge);
+            this.Controls.Add(this.lblHorlogeUp);
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
             this.Name = "Form1";
@@ -144,6 +174,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHorloge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +193,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAide;
         private System.Windows.Forms.MenuStrip mspMenu;
         private System.Windows.Forms.ToolStripMenuItem tsmPropos;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tim;
+        private System.Windows.Forms.PictureBox pbHorloge;
+        private System.Windows.Forms.Label lblHorlogeUp;
 
 
     }

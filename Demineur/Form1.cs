@@ -12,6 +12,9 @@ namespace Demineur
 {
     public partial class Form1 : Form
     {
+        // variable pour le timer
+        int timCounter;
+
         //estethique des cases 
         const int LARGEURcase = 25;
         const int HAUTEURcase = 25;
@@ -43,7 +46,7 @@ namespace Demineur
         public Form1()
         {
             InitializeComponent();
-            playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
+           
         }
 
         private void tsmDebutant_Click(object sender, EventArgs e)
@@ -89,6 +92,7 @@ namespace Demineur
         {
             // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
             NewGame();
+            
         }
 
         public void NewGame()
@@ -96,6 +100,7 @@ namespace Demineur
             CreeGrille(LARGEURgrille, HAUTEURgrille);
             minerterrain(nbbombe);
             CountAutour();
+            
         }
 
         public void CreeGrille(int largeur, int hauteur)
@@ -130,6 +135,10 @@ namespace Demineur
                     idcases++;
                 }
             }
+            playSound("..\\..\\Resources\\The_Body_Bome_The_Hurt_Locker.wav");
+            tim.Enabled = true;
+            pbHorloge.Visible = true;
+            timCounter = 0;
         }
 
         // methode pour poser les bombes sur le terrain
@@ -432,6 +441,12 @@ namespace Demineur
         {
             MessageBox.Show("vous avez gagné");
             NewGame();
+        }
+
+        private void tim_Tick(object sender, EventArgs e)
+        {
+            timCounter += 1;
+            lblHorlogeUp.Text = timCounter.ToString();
         }
     }
 }

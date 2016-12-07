@@ -141,6 +141,16 @@ namespace Demineur.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap horloge {
+            get {
+                object obj = ResourceManager.GetObject("horloge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap huit {
             get {
                 object obj = ResourceManager.GetObject("huit", resourceCulture);

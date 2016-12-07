@@ -115,8 +115,7 @@ namespace Demineur
                         isrevealed = true;
                         this.Reveal(BBsAutour);
                         
-                    }
-            
+                    }            
         }
 
         public void Reveal(int NbBombeAutour)

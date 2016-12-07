@@ -130,6 +130,7 @@
     <None Include="Resources\dead-smiley.png" />
     <None Include="Resources\Ding_Sound_Effect.wav" />
     <None Include="Resources\Explosion_sound.wav" />
+    <None Include="Resources\horloge.png" />
     <Content Include="Resources\huit.PNG" />
     <Content Include="Resources\quatre.PNG" />
     <Content Include="Resources\sept.PNG" />
