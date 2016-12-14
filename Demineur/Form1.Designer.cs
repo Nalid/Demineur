@@ -159,6 +159,7 @@
             this.pbHorloge.TabIndex = 4;
             this.pbHorloge.TabStop = false;
             this.pbHorloge.Visible = false;
+            this.pbHorloge.Click += new System.EventHandler(this.pbHorloge_Click);
             // 
             // Form1
             // 

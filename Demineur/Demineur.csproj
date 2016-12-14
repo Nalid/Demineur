@@ -133,6 +133,7 @@
     <None Include="Resources\horloge.png" />
     <Content Include="Resources\huit.PNG" />
     <Content Include="Resources\quatre.PNG" />
+    <None Include="Resources\SCORE.txt" />
     <Content Include="Resources\sept.PNG" />
     <Content Include="Resources\six.PNG" />
   </ItemGroup>

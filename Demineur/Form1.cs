@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
+using System.Linq;
 
 namespace Demineur
 {
@@ -33,7 +35,7 @@ namespace Demineur
         //autres utiles pour le code 
         int idcases = 0; // nombre de base !! pas toucher !!
         Random rdmbombe = new Random(); // random pour placer les bombes 
-        
+
         List<Cases> caseslist = new List<Cases>();// les des cases du jeu 
 
         // List<int> caserevealed = new List<int>();// utile pour les 0 
@@ -46,7 +48,7 @@ namespace Demineur
         public Form1()
         {
             InitializeComponent();
-           
+
         }
 
         private void tsmDebutant_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace Demineur
             tsmDebutant.Checked = true;
             LARGEURgrille = 9;
             HAUTEURgrille = 9;
-            nbbombe = 10;
+            nbbombe = 11;
             NewGame();
         }
 
@@ -67,7 +69,7 @@ namespace Demineur
             tsmIntermediaire.Checked = true;
             LARGEURgrille = 16;
             HAUTEURgrille = 16;
-            nbbombe = 40;
+            nbbombe = 41;
             NewGame();
         }
 
@@ -78,7 +80,7 @@ namespace Demineur
             tsmIntermediaire.Checked = false;
             LARGEURgrille = 16;
             HAUTEURgrille = 30;
-            nbbombe = 99;
+            nbbombe = 100;
             NewGame();
         }
 
@@ -91,8 +93,8 @@ namespace Demineur
         private void Form1_Load(object sender, EventArgs e)
         {
             // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
-            
-            
+
+
         }
 
         public void NewGame()
@@ -104,7 +106,7 @@ namespace Demineur
             tim.Enabled = true;
             pbHorloge.Visible = true;
             timCounter = 0;
-            
+
         }
 
         public void CreeGrille(int largeur, int hauteur)
@@ -139,7 +141,7 @@ namespace Demineur
                     idcases++;
                 }
             }
-           
+
         }
 
         // methode pour poser les bombes sur le terrain
@@ -157,7 +159,7 @@ namespace Demineur
                 }
 
             }
-            
+
         }
 
         public void CountAutour()
@@ -368,7 +370,7 @@ namespace Demineur
                     if (caze.isrevealed == false)
                     {
                         caze.Reveal();
-                        
+
                     }
 
                 }
@@ -416,8 +418,9 @@ namespace Demineur
         public void gameover()
         {
             MessageBox.Show("vous avez perdu");
+            score();
             NewGame();
-            
+
 
         }
         public void IsitFinish()
@@ -430,7 +433,7 @@ namespace Demineur
                     nbrevealed++;
                 }
                 // si toutes les cases non bombes sont revélées 
-                if (nbrevealed >= (LARGEURgrille*HAUTEURgrille)-nbbombe)
+                if (nbrevealed >= (LARGEURgrille * HAUTEURgrille) - nbbombe)
                 {
                     GameWin();
                     break;
@@ -441,6 +444,7 @@ namespace Demineur
         public void GameWin()
         {
             MessageBox.Show("vous avez gagné");
+            score();
             NewGame();
         }
 
@@ -448,6 +452,53 @@ namespace Demineur
         {
             timCounter += 1;
             lblHorlogeUp.Text = timCounter.ToString();
+        }
+
+        private void score()
+        {
+            System.IO.StreamReader reader = new System.IO.StreamReader(@"C:\Users\SULZBACHJ_INFO\Documents\Demineur\SCORE.txt"); // create StreamReader for the file
+
+            int maxTopScores = 3; // maximum number of scores to retrieve
+            string line;
+            List<int> topScores = new List<int>(); // create a list to store the top scores in
+
+            for (int i = 0; i < maxTopScores; i++)
+            {
+                line = reader.ReadLine();
+                topScores.Add(Convert.ToInt32(line));
+
+            }
+            int tempScore = Convert.ToInt32(timCounter.ToString());
+
+            while (true)
+            {
+                for (int i = 0; i < maxTopScores; i++)
+                {
+                    if (tempScore < topScores[i])
+                    {
+                        topScores.Insert(i, tempScore); // insert this score before the one that it is bigger than
+                        if (topScores.Count > maxTopScores)
+                        {
+                            topScores.RemoveAt(topScores.Count - 1); // too many scores, remove the last (lowest)
+                        }
+                        goto addScore;
+                    }
+
+                }
+            addScore: break;
+            }
+
+            reader.Close();
+            System.IO.StreamWriter writer = new System.IO.StreamWriter(@"C:\Users\SULZBACHJ_INFO\Documents\Demineur\SCORE.txt");
+            foreach (int x in topScores)
+                writer.WriteLine(x);
+            writer.Close();
+
+        }
+
+        private void pbHorloge_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
