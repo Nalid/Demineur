@@ -418,7 +418,6 @@ namespace Demineur
         public void gameover()
         {
             MessageBox.Show("vous avez perdu");
-            score();
             NewGame();
 
 
