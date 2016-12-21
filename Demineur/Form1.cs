@@ -59,7 +59,9 @@ namespace Demineur
             LARGEURgrille = 9;
             HAUTEURgrille = 9;
             nbbombe = 11;
+            this.ClientSize = new System.Drawing.Size(280, 280);
             NewGame();
+            
         }
 
         private void tsmIntermediaire_Click(object sender, EventArgs e)
@@ -70,6 +72,7 @@ namespace Demineur
             LARGEURgrille = 16;
             HAUTEURgrille = 16;
             nbbombe = 41;
+            this.ClientSize = new System.Drawing.Size(450, 450);
             NewGame();
         }
 
@@ -78,9 +81,10 @@ namespace Demineur
             tsmExpert.Checked = true;
             tsmDebutant.Checked = false;
             tsmIntermediaire.Checked = false;
-            LARGEURgrille = 16;
-            HAUTEURgrille = 30;
+            LARGEURgrille = 22;
+            HAUTEURgrille = 22;
             nbbombe = 100;
+            this.ClientSize = new System.Drawing.Size(600, 600);
             NewGame();
         }
 
@@ -89,12 +93,9 @@ namespace Demineur
 
         }
 
-        // ceci est un commentaire
         private void Form1_Load(object sender, EventArgs e)
         {
-            // creer le terrain, pose les bombes, puis  attribut le num au case(nmbre de bombes alentour pour chaque case )
-
-
+            
         }
 
         public void NewGame()
